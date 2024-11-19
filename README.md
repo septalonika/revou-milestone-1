@@ -21,7 +21,7 @@
 
 This project has been deployed on the netlify and using the custom domain.
 
-Link: [https://rym.cugud.dev](https://rym.cugud.dev)
+Link: [https://rym.cugud.com](https://rym.cugud.com)
 
 ## HOW TO SET UP WITH THIS PROJECT
 
