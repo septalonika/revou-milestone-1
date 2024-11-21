@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff2)
+        format("woff2"),
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Regular.woff)
+        format("woff");
+  }
+  @font-face {
+    font-family: "Satoshi";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Italic.woff2)
+        format("woff2"),
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Italic.woff)
+        format("woff");
+  }
+  @font-face {
+    font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff2)
+        format("woff2"),
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Bold.woff)
+        format("woff");
+  }
+
+  @font-face {
+    font-family: "Satoshi";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src:
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.woff2)
+        format("woff2"),
+      url(../../../public/fonts/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-BoldItalic.woff)
+        format("woff");
+  }
+}
+
+@layer base {
+  html {
+    font-family: "Satoshi", system-ui, sans-serif;
+  }
+}
+
+html {
+  /* remove scroll bar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-neutral text-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-2xl md:text-4xl lg:text-4xl;
+}
+
+h2 {
+  @apply text-xl md:text-3xl lg:text-3xl;
+}
+
+h3 {
+  @apply text-lg md:text-2xl lg:text-2xl;
+}
+
+.header-nav {
+  @apply fixed left-0 top-0 z-20 h-16 w-full bg-primary px-4;
+}
+
+.company-logo {
+  @apply text-2xl font-extrabold md:text-2xl;
+  font-family: "Newsreader", Arial, "Serif";
+}
+
+h2 .company-logo {
+  @apply font-bold text-primary;
+  font-family: "Newsreader", Arial, "Serif";
+}
+
+.nav-container {
+  @apply flex h-full w-full items-center justify-start;
+}
+
+.nav-logo {
+  @apply flex items-center text-accent;
+}
+
+.burger-menu {
+  @apply fixed -right-[120%] top-0 z-20 flex h-screen w-screen flex-col overflow-hidden p-8 transition-all duration-300;
+}
+
+.burger-menu.active {
+  @apply right-0;
+}
+
+.noscroll {
+  @apply h-screen overflow-hidden;
+}
+
+.main-container {
+  @apply min-h-[48em] w-screen justify-center pt-16 md:pt-20;
+}
+
+.activity-container {
+  @apply my-2 min-h-96 px-8 py-6;
+}
+
+.btn {
+  @apply text-neutral border-outer-primary flex w-24 select-none items-center justify-center rounded border bg-primary py-2 uppercase drop-shadow-lg active:border-primary active:bg-secondary active:text-primary active:shadow-inner;
+}
+
+.burger-btn {
+  @apply relative ml-auto flex h-10 w-10;
+}
+
+.burger-btn span {
+  @apply absolute left-1/2 top-1/2 z-[30] h-1 w-full -translate-x-1/2 -translate-y-1/2 rounded bg-white transition-all duration-300;
+}
+
+.burger-btn.active span {
+  @apply bg-primary;
+}
+
+.burger-btn span:nth-child(1) {
+  @apply top-[25%];
+}
+
+.burger-btn span:nth-child(3) {
+  @apply top-[75%];
+}
+
+.burger-btn.active span:nth-child(1) {
+  @apply top-[50%] rotate-45;
+}
+
+.burger-btn.active span:nth-child(2) {
+  @apply opacity-0;
+}
+
+.burger-btn.active span:nth-child(3) {
+  @apply top-[50%] -rotate-45;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 1px #000;
+}
+
+.mobile-contents {
+  @apply grid grid-flow-row justify-center gap-4;
+}
