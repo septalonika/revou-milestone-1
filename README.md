@@ -1,12 +1,16 @@
-### Rehobot Youth Ministry
+![Header](./public/images/readme/homepage.jpeg)
 
----
+# Rehobot Youth Ministry
 
-## PROJECT FOLDER STRUCTURE
+[![Linkedin Badge](https://img.shields.io/badge/-Andika_Septalonika-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/septalonika/)
+[![Gmail Badge](https://img.shields.io/badge/-septalonika@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white)](mailto:septalonika@gmail.com)
 
--Header
--Main
--Footer
+## WEBSITE STRUCTURE
+
+- Header
+- Main
+  -
+- Footer
 
 ## IMPLEMENTED TECHNOLOGY
 

@@ -21,13 +21,3 @@ module.exports = {
   },
   plugins: ["prettier-plugin-tailwindcss"],
 };
-
-// primary: '#07E3D0',
-// secondary: '#adffd0',
-// accent: '#6fa4d6',
-// neutral: '#332541',
-// 'base-100': '#000000',
-// info: '#7ba7f4',
-// success: '#109347',
-// warning: '#fcc764',
-// error: '#f75e5e',
