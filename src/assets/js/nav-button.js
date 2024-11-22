@@ -6,38 +6,44 @@ burgerBtn.addEventListener("click", () => {
   burgerMenu.classList.toggle("active");
 
   if (burgerMenu.classList.contains("active")) {
-    document.body.classList.add("noscroll"); // Disable scroll
+    document.body.classList.add("noscroll");
   } else {
-    document.body.classList.remove("noscroll"); // Enable scroll
+    document.body.classList.remove("noscroll");
   }
 });
 
-// Function to handle scrolling when the hash changes
+burgerMenu.addEventListener("click", () => {
+  burgerBtn.classList.toggle("active");
+  burgerMenu.classList.toggle("active");
+
+  if (burgerMenu.classList.contains("active")) {
+    document.body.classList.add("noscroll");
+  } else {
+    document.body.classList.remove("noscroll");
+  }
+
+  handleHashChange();
+});
+
+window.addEventListener("hashchange", handleHashChange);
+
+document.addEventListener("DOMContentLoaded", () => {
+  handleHashChange();
+});
+
 function handleHashChange() {
-  // Check if there is a hash in the URL
   if (window.location.hash) {
-    // Get the target section based on the hash
-    const targetId = window.location.hash.substring(1); // Remove the '#' character
+    const targetId = window.location.hash.substring(1);
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      // Calculate the top position of the target element
       const targetPosition =
         targetElement.getBoundingClientRect().top + window.scrollY;
 
-      // Scroll to the target position plus an additional 20 pixels
       window.scrollTo({
-        top: targetPosition - 40, // Adjust for 20px offset
-        behavior: "smooth", // Smooth scroll effect
+        top: targetPosition - 80,
+        behavior: "smooth",
       });
     }
   }
 }
-
-// Add an event listener for hash changes
-window.addEventListener("hashchange", handleHashChange);
-
-// Optional: Call the function on page load in case there's already a hash
-document.addEventListener("DOMContentLoaded", () => {
-  handleHashChange();
-});
