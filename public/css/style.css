@@ -698,20 +698,8 @@ html {
   height: 100%;
 }
 
-.max-h-\[124px\] {
-  max-height: 124px;
-}
-
-.max-h-\[320px\] {
-  max-height: 320px;
-}
-
 .min-h-96 {
   min-height: 24rem;
-}
-
-.min-h-\[124px\] {
-  min-height: 124px;
 }
 
 .w-12 {
@@ -755,10 +743,6 @@ html {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -841,11 +825,6 @@ html {
   background-color: rgb(16 55 92 / var(--tw-bg-opacity, 1));
 }
 
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -856,22 +835,8 @@ html {
      object-fit: fill;
 }
 
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
-.object-top {
-  -o-object-position: top;
-     object-position: top;
-}
-
 .p-10 {
   padding: 2.5rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
 }
 
 .px-4 {
@@ -904,16 +869,6 @@ html {
   padding-bottom: 1.5rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -924,10 +879,6 @@ html {
 
 .text-justify {
   text-align: justify;
-}
-
-.indent-2 {
-  text-indent: 0.5rem;
 }
 
 .indent-6 {
@@ -1220,10 +1171,6 @@ h2 .company-logo {
   --tw-scale-y: .95;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   cursor: pointer;
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 131 23 / var(--tw-bg-opacity, 1));
-  --tw-text-opacity: 1;
-  color: rgb(16 55 92 / var(--tw-text-opacity, 1));
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1239,6 +1186,15 @@ h2 .company-logo {
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 1024px) {
+  .btn:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(235 131 23 / var(--tw-bg-opacity, 1));
+    --tw-text-opacity: 1;
+    color: rgb(16 55 92 / var(--tw-text-opacity, 1));
+  }
 }
 
 .burger-btn {
@@ -1345,8 +1301,8 @@ h2 .company-logo {
      -moz-user-select: none;
           user-select: none;
   border-radius: 0.25rem;
-  border-style: none;
-  background-color: rgb(32 14 58 / 0.8);
+  border-width: 1px;
+  background-color: rgb(0 0 0 / 0.8);
   background-image: none;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1359,6 +1315,10 @@ h2 .company-logo {
   color: rgb(243 198 35 / var(--tw-text-opacity, 1));
 }
 
+.carousel-button:active {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
 @media (min-width: 768px) {
   .carousel-button {
     top: 30%;
@@ -1369,11 +1329,10 @@ h2 .company-logo {
   .carousel-button {
     top: 40%;
   }
-}
 
-.carousel-button:hover,
-.carousel-button:focus {
-  background-color: rgb(255 255 255 / 0.2);
+  .carousel-button:hover {
+    background-color: rgb(255 255 255 / 0.2);
+  }
 }
 
 .carousel-button.prev {
@@ -1408,7 +1367,32 @@ h2 .company-logo {
   }
 }
 
-/* banner carousel*/
+/* end of banner carousel*/
+
+/* animation */
+
+.pulse-animation {
+  box-shadow: 0 0 0 0 #f3c623;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #f3c62370;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px #f3c623;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #f3c623;
+  }
+}
 
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
@@ -1416,14 +1400,14 @@ h2 .company-logo {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:text-secondary:hover {
-  --tw-text-opacity: 1;
-  color: rgb(235 131 23 / var(--tw-text-opacity, 1));
-}
-
 .hover\:text-neutral:hover {
   --tw-text-opacity: 1;
   color: rgb(244 246 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-secondary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(235 131 23 / var(--tw-text-opacity, 1));
 }
 
 .active\:scale-105:active {
@@ -1437,15 +1421,15 @@ h2 .company-logo {
   color: rgb(244 246 255 / var(--tw-text-opacity, 1));
 }
 
-.group:hover .group-hover\:scale-110 {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:scale-105 {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1460,15 +1444,15 @@ h2 .company-logo {
   transition-duration: 150ms;
 }
 
-.group:active .group-active\:scale-110 {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:active .group-active\:scale-105 {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:active .group-active\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1502,30 +1486,6 @@ h2 .company-logo {
 
   .md\:h-\[34rem\] {
     height: 34rem;
-  }
-
-  .md\:h-\[36rem\] {
-    height: 36rem;
-  }
-
-  .md\:h-\[40rem\] {
-    height: 40rem;
-  }
-
-  .md\:h-\[62rem\] {
-    height: 62rem;
-  }
-
-  .md\:max-h-\[300px\] {
-    max-height: 300px;
-  }
-
-  .md\:max-h-\[200px\] {
-    max-height: 200px;
-  }
-
-  .md\:max-h-\[460px\] {
-    max-height: 460px;
   }
 
   .md\:w-14 {

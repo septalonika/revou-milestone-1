@@ -131,7 +131,7 @@ h2 .company-logo {
 }
 
 .btn {
-  @apply flex w-24 select-none items-center justify-center rounded border border-outer-primary bg-primary py-2 uppercase text-neutral drop-shadow-lg hover:scale-95 hover:cursor-pointer hover:bg-secondary hover:text-primary hover:shadow-inner active:border-primary active:bg-secondary active:text-primary active:shadow-inner;
+  @apply flex w-24 select-none items-center justify-center rounded border border-outer-primary bg-primary py-2 uppercase text-neutral drop-shadow-lg hover:scale-95 hover:cursor-pointer hover:shadow-inner active:border-primary active:bg-secondary active:text-primary active:shadow-inner lg:hover:bg-secondary lg:hover:text-primary;
 }
 
 .burger-btn {
@@ -196,12 +196,7 @@ h2 .company-logo {
 }
 
 .carousel-button {
-  @apply absolute top-[22%] z-10 -translate-y-[50%] cursor-pointer select-none rounded border-none bg-[#200E3A]/80 bg-none px-4 py-2 text-2xl font-[4rem] text-accent md:top-[30%] lg:top-[40%];
-}
-
-.carousel-button:hover,
-.carousel-button:focus {
-  @apply bg-white/20;
+  @apply absolute top-[22%] z-10 -translate-y-[50%] cursor-pointer select-none rounded border bg-black/80 bg-none px-4 py-2 text-2xl font-[4rem] text-accent active:bg-white/20 md:top-[30%] lg:top-[40%] lg:hover:bg-white/20;
 }
 
 .carousel-button.prev {
@@ -210,5 +205,29 @@ h2 .company-logo {
 .carousel-button.next {
   @apply right-2 md:right-4 lg:right-10;
 }
+/* end of banner carousel*/
 
-/* banner carousel*/
+/* animation */
+
+.pulse-animation {
+  box-shadow: 0 0 0 0 #f3c623;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #f3c62370;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px #f3c623;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #f3c623;
+  }
+}
