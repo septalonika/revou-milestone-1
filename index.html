@@ -21,7 +21,7 @@
       sizes="16x16"
       href="./public/images/logo/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,10 +30,10 @@
       rel="stylesheet"
     />
   </head>
-  <body class="w-screen flex-col">
+  <body class="w-screen select-none flex-col">
     <header class="header-nav drop-shadow-accent-b md:h-20 md:px-12">
       <nav class="nav-container">
-        <a class="nav-logo" href="./index.html#">
+        <a class="nav-logo hover:scale-105" href="./index.html#">
           <img
             src="./public/images/logo/logo.svg"
             alt="logo"
@@ -46,24 +46,26 @@
 
         <div class="hidden text-outer-primary lg:flex">
           <ul class="flex gap-6 text-[#e6e6e6]">
-            <li>
+            <li class="hover:scale-105 hover:text-secondary active:scale-105">
               <a href="./index.html#"><p class="text-lg">Home</p></a>
             </li>
-            <li>
+            <li class="hover:scale-105 hover:text-secondary active:scale-105">
               <a href="./index.html#our-events"
                 ><p class="text-lg">Events</p></a
               >
             </li>
-            <li>
+            <li class="hover:scale-105 hover:text-secondary active:scale-105">
               <a href="./index.html#contents"
                 ><p class="text-lg">Contents</p></a
               >
             </li>
-            <li>
-              <a href="./index.html#"><p class="text-lg">About</p></a>
+            <li class="hover:scale-105 hover:text-secondary active:scale-105">
+              <a href="./src/pages/about.html"><p class="text-lg">About</p></a>
             </li>
-            <li>
-              <a href="./index.html#"><p class="text-lg">Teams</p></a>
+            <li class="hover:scale-105 hover:text-secondary active:scale-105">
+              <a href="./src/pages/about.html#teams"
+                ><p class="text-lg">Teams</p></a
+              >
             </li>
           </ul>
         </div>
@@ -89,12 +91,12 @@
               >
             </li>
             <li class="w-fit px-4 py-2">
-              <a href="./index.html#contents"
+              <a href="./src/pages/about.html"
                 ><h2 class="md:text-3xl">About Us</h2></a
               >
             </li>
             <li class="w-fit px-4 py-2">
-              <a href="./index.html#contents"
+              <a href="./src/pages/about.html#teams"
                 ><h2 class="md:text-3xl">Our Teams</h2></a
               >
             </li>
@@ -115,22 +117,6 @@
           &#x2771;
         </div>
         <ul data-slides>
-          <li class="slide" data-active>
-            <img
-              src="./src/assets/images/banners/banner-1-lg.webp"
-              alt="Banner #1"
-              class="banner top-20 -z-10 hidden w-full object-fill blur-sm md:object-cover lg:absolute lg:block lg:h-[62vh]"
-            />
-            <img
-              srcset="
-                ./src/assets/images/banners/banner-1-md.webp,
-                ./src/assets/images/banners/banner-1-lg.webp 2x
-              "
-              src="./src/assets/images/banners/banner-1-lg.webp"
-              alt="Hero #1"
-              class="hero mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
-            />
-          </li>
           <li class="slide" data-active>
             <img
               src="./src/assets/images/banners/banner-2-lg.webp"
@@ -176,6 +162,22 @@
               "
               src="./src/assets/images/banners/banner-4-lg.webp"
               alt="Hero #4"
+              class="hero mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
+            />
+          </li>
+          <li class="slide" data-active>
+            <img
+              src="./src/assets/images/banners/banner-1-lg.webp"
+              alt="Banner #1"
+              class="banner top-20 -z-10 hidden w-full object-fill blur-sm md:object-cover lg:absolute lg:block lg:h-[62vh]"
+            />
+            <img
+              srcset="
+                ./src/assets/images/banners/banner-1-md.webp,
+                ./src/assets/images/banners/banner-1-lg.webp 2x
+              "
+              src="./src/assets/images/banners/banner-1-lg.webp"
+              alt="Hero #1"
               class="hero mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
             />
           </li>
@@ -322,7 +324,7 @@
         </ul>
       </section>
     </main>
-    <footer class="flex w-screen flex-col justify-center bg-accent">
+    <footer class="flex w-screen select-none flex-col justify-center bg-accent">
       <section
         id="footer"
         class="mx-8 flex flex-col py-4 lg:flex-row lg:gap-8 lg:py-8"
@@ -339,27 +341,35 @@
         <div class="py-2 lg:w-7/12 lg:py-0">
           <h3>Find Us</h3>
           <ul>
-            <li class="flex py-2">
+            <li
+              class="flex py-2 hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral"
+            >
               <a href="https://instagram.com/rymbekasi">@rymbekasi</a>
             </li>
-            <li class="py-2">
+            <li
+              class="py-2 hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral"
+            >
               <a href="https://wa.me/6285156513102">(+62) 8515-651-3102</a>
             </li>
-            <li>
-              <p class="md:py-2">
-                Jl. Taman Wisma Asri, Ruko L5-7, RT.003/RW.011, Teluk Pucung,
-                Bekasi Utara, Bekasi, West Java 17121
-              </p>
-            </li>
-            <li class="flex flex-col gap-2 py-2">
+            <li
+              class="hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral"
+            ></li>
+            <li class="group flex flex-col gap-2 py-2">
               <a
                 href="https://maps.app.goo.gl/e6hCvN3G8QrtGnKt6"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex flex-col gap-2"
               >
+                <p
+                  class="group-hover:scale-105 group-hover:text-neutral group-active:scale-105 group-active:text-neutral md:py-2"
+                >
+                  Jl. Taman Wisma Asri, Ruko L5-7, RT.003/RW.011, Teluk Pucung,
+                  Bekasi Utara, Bekasi, West Java 17121
+                </p>
                 <iframe
-                  class="flex w-full rounded-2xl py-2 md:h-64 lg:h-40"
+                  title="Location"
+                  class="flex w-full rounded-2xl py-2 group-hover:scale-105 group-active:scale-105 md:h-64 lg:h-40"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7932.815814307565!2d107.02138879126619!3d-6.20980827511214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698f066a0ffcd7%3A0x99d57ca02e342c16!2sGKII%20Rehobot%20Wisma%20Asri!5e0!3m2!1sen!2sid!4v1732143839566!5m2!1sen!2sid"
                   allowfullscreen=""
                   loading="lazy"
@@ -373,18 +383,46 @@
           <div class="py-2 lg:w-1/2 lg:py-0">
             <h3>Quick Links</h3>
             <ul class="flex flex-col gap-2">
-              <li class="md:py-1">Home</li>
-              <li class="md:py-1">Events</li>
-              <li class="md:py-1">Contents</li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                <a href="#"><p>Home</p></a>
+              </li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                <a href="./index.html#our-events"><p>Events</p></a>
+              </li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                <a href="./index.html#contents"><p>Contents</p></a>
+              </li>
             </ul>
           </div>
           <div class="lg:w-1/2">
             <h3>About Us</h3>
             <ul class="flex flex-col gap-2">
-              <li class="md:py-1">Vision & Mission</li>
-              <li class="md:py-1">Team</li>
-              <li class="md:py-1">Volunteer</li>
-              <li class="md:py-1">Join Us</li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                Vision & Mission
+              </li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                Team
+              </li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                Volunteer
+              </li>
+              <li
+                class="cursor-pointer select-none hover:scale-105 hover:text-neutral active:scale-105 active:text-neutral md:py-1"
+              >
+                Join Us
+              </li>
             </ul>
           </div>
         </nav>
