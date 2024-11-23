@@ -64,7 +64,7 @@ html {
 }
 
 body {
-  @apply bg-neutral text-primary;
+  @apply bg-neutral text-primary dark:bg-[#222831] dark:text-[#e6e6e6];
 }
 
 h1,
@@ -89,7 +89,7 @@ h3 {
 }
 
 .header-nav {
-  @apply fixed left-0 top-0 z-20 h-16 w-full bg-primary px-4;
+  @apply fixed left-0 top-0 z-20 h-16 w-full bg-primary px-4 dark:bg-[#222831];
 }
 
 .company-logo {
@@ -131,7 +131,7 @@ h2 .company-logo {
 }
 
 .btn {
-  @apply flex w-24 select-none items-center justify-center rounded border border-outer-primary bg-primary py-2 uppercase text-neutral drop-shadow-lg hover:scale-95 hover:cursor-pointer hover:shadow-inner active:border-primary active:bg-secondary active:text-primary active:shadow-inner lg:hover:bg-secondary lg:hover:text-primary;
+  @apply flex w-24 select-none items-center justify-center rounded border border-outer-primary bg-primary py-2 uppercase text-neutral drop-shadow-lg hover:scale-95 hover:cursor-pointer hover:shadow-inner active:border-primary active:bg-secondary active:text-primary active:shadow-inner dark:bg-[#393E46] lg:hover:bg-secondary lg:hover:text-primary;
 }
 
 .burger-btn {
@@ -230,4 +230,8 @@ h2 .company-logo {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 #f3c623;
   }
+}
+
+#toggleDark:checked ~ label div.toggle-circle {
+  @apply translate-x-8; /* Applies translate-x-3 when checked */
 }

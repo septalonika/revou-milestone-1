@@ -142,11 +142,15 @@
 
 ![setup-2.png](public/images/readme/setup-2.png)
 
-### 3. Importing Project to Netlify
+### 3. Set up Netlify with Niagahoster DNS
+
+![alt text](public/images/readme/netlify-niagahoster.png)
+
+### 4. Importing Project to Netlify
 
 ![netlify-set-up.png](public/images/readme/netlify-set-up.png)
 
-### 4. Final Step: Publish Project
+### 5. Final Step: Publish Project
 
 ![netlify-set-up.png](public/images/readme/publish-website.png)
 
