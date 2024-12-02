@@ -706,6 +706,10 @@ html {
   height: 16rem;
 }
 
+.h-\[20vh\] {
+  height: 20vh;
+}
+
 .h-full {
   height: 100%;
 }
@@ -1565,6 +1569,10 @@ h2 .company-logo {
 
   .md\:h-\[34rem\] {
     height: 34rem;
+  }
+
+  .md\:h-\[40vh\] {
+    height: 40vh;
   }
 
   .md\:w-14 {

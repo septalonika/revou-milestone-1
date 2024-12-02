@@ -21,7 +21,6 @@
       sizes="16x16"
       href="./public/images/logo/favicon-16x16.png"
     />
-    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -140,7 +139,7 @@
           &#x2771;
         </div>
         <ul data-slides>
-          <li class="slide" data-active>
+          <li class="slide lg:h-[62vh] h-[20vh] md:h-[40vh]" data-active>
             <img
               src="./src/assets/images/banners/banner-2-lg.webp"
               alt="Banner #2"
@@ -153,10 +152,10 @@
               "
               src="./src/assets/images/banners/banner-2-lg.webp"
               alt="Hero #2"
-              class="her mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
+              class="hero mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
             />
           </li>
-          <li class="slide" data-active>
+          <li class="slide lg:h-[62vh] h-[20vh] md:h-[40vh]" data-active>
             <img
               src="./src/assets/images/banners/banner-3-lg.webp"
               alt="Banner #3"
@@ -172,7 +171,7 @@
               class="hero mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
             />
           </li>
-          <li class="slide" data-active>
+          <li class="slide lg:h-[62vh] h-[20vh] md:h-[40vh]" data-active>
             <img
               src="./src/assets/images/banners/banner-4-lg.webp"
               alt="Banner #4"
@@ -188,7 +187,7 @@
               class="hero mt-16 w-full object-cover shadow-lg md:object-contain md:shadow-none md:drop-shadow-lg lg:mt-20 lg:h-[62vh]"
             />
           </li>
-          <li class="slide" data-active>
+          <li class="slide lg:h-[62vh] h-[20vh] md:h-[40vh]" data-active>
             <img
               src="./src/assets/images/banners/banner-1-lg.webp"
               alt="Banner #1"
@@ -219,15 +218,36 @@
               <div
                 class="h-18 w-18 pulse-animation flex flex-col justify-center rounded-md border border-primary px-6 py-2 shadow-xl md:h-24 md:w-24"
               >
-                <h1 id="event-1-date">21</h1>
-                <p id="event-1-month">NOV</p>
+                <h1 id="event_1_date">21</h1>
+                <p id="event_1_month">NOV</p>
               </div>
             </div>
             <div class="w-4/6">
-              <h3>Morning Prayers</h3>
+              <h3 id="event_1_name">Morning Prayers</h3>
               <div class="py-2">
-                <p class="text-xs md:text-base">5:00 am</p>
-                <p class="text-sm md:text-lg">Youtube Channel GKII Rehobot</p>
+                <p id="event_1_time" class="text-xs md:text-base">5:00 am</p>
+                <p id="event_1_loc" class="text-sm md:text-lg">
+                  Youtube Channel GKII Rehobot
+                </p>
+                <p id="event_1_liturgos" class="text-sm md:text-lg"></p>
+                <a
+                  id="event_1"
+                  class="hidden font-semibold"
+                  href=""
+                  target="_blank"
+                  >Register
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </li>
@@ -238,20 +258,34 @@
               <div
                 class="h-18 w-18 pulse-animation flex flex-col justify-center rounded-md border border-primary px-6 py-2 shadow-xl md:h-24 md:w-24"
               >
-                <h1>24</h1>
-                <p>NOV</p>
+                <h1 id="event_2_date"></h1>
+                <p id="event_2_month"></p>
               </div>
             </div>
             <div class="w-4/6">
-              <h3>Sunday Service</h3>
+              <h3 id="event_2_name">Event 2</h3>
               <div class="py-2">
-                <p class="text-xs md:text-base">9:00 am - 11:00 am</p>
-                <p class="text-sm md:text-lg">
-                  Youtube Channel GKII Rehobot & On Site
-                </p>
-                <p class="text-sm md:text-lg">
-                  Ev. David Paksoal, S.Psi, M.A, M.Th
-                </p>
+                <p id="event_2_time" class="text-xs md:text-base"></p>
+                <p id="event_2_loc" class="text-sm md:text-lg"></p>
+                <p id="event_2_liturgos" class="text-sm md:text-lg"></p>
+                <a
+                  id="event_2"
+                  class="hidden font-semibold"
+                  href=""
+                  target="_blank"
+                  >Register
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </li>
@@ -262,15 +296,34 @@
               <div
                 class="h-18 w-18 pulse-animation flex flex-col justify-center rounded-md border border-primary px-6 py-2 shadow-xl md:h-24 md:w-24"
               >
-                <h1>24</h1>
-                <p>NOV</p>
+                <h1 id="event_3_date"></h1>
+                <p id="event_3_month"></p>
               </div>
             </div>
             <div class="w-4/6">
-              <h3>RYM Pool Party</h3>
+              <h3 id="event_3_name"></h3>
               <div class="py-2">
-                <p class="text-xs md:text-base">14:30 pm</p>
-                <p class="text-sm md:text-lg">Kolam Renang Taman Kota Bekasi</p>
+                <p id="event_3_time" class="text-xs md:text-base"></p>
+                <p id="event_3_loc" class="text-sm md:text-lg"></p>
+                <p id="event_3_liturgos" class="text-sm md:text-lg"></p>
+                <a
+                  id="event_3"
+                  class="hidden font-semibold"
+                  href=""
+                  target="_blank"
+                  >Register
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M14 3v2h3.59l-9.83 9.83l1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </li>
@@ -466,6 +519,7 @@
       </section>
     </footer>
     <script src="./src/assets/js/nav-button.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./src/assets/js/our-event.js" defer></script>
     <script src="./src/assets/js/banner.js" defer></script>
     <script src="./src/assets/js/dark-mode.js" defer></script>
