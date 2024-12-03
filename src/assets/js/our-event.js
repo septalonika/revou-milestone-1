@@ -63,9 +63,10 @@ async function handleData() {
         viewId: "vw636i2cei1bkw1l",
       },
       headers: {
-        "xc-token": "qv5ODlxzpSMfQlgWiaQAfJ0hMCdBksAiqV7uzeb6",
+        "xc-token": window.env.VITE_CUGUD_TOKEN,
       },
     });
+
     console.log("Data received:", response.data);
 
     // first events
